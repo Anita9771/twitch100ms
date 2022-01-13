@@ -15,19 +15,6 @@ const JoinForm = () => {
 
   const joinRoom = () => {
     
-      getToken(role)
-      .then((token) => {
-        hmsActions.join({
-          userName: userName || 'Anonymous',
-          authToken: token,
-          settings: {
-            isAudioMuted: true,
-          },
-        });
-      })
-      .catch((error) => {
-        console.log('Token API Error', error);
-      });
 
   };
 

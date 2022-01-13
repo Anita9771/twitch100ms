@@ -5,6 +5,7 @@ import App from "./App";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
+  // Wrapping the App.js file
   <HMSRoomProvider>
     <HMSThemeProvider appBuilder={{ theme: "dark" }}>
       <App />

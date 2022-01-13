@@ -13,34 +13,15 @@ const Screen = ({peer, isLocal }) => {
     const screenTrack = useHMSStore(selectScreenShareByPeerID(peer.id));
 
 
+    // Screen function
     
-    React.useEffect(() => {
-        (async () => {
-          console.log(screenRef.current);
-          console.log(screenTrack);
-          if (screenRef.current && screenTrack) {
-            if (screenTrack.enabled) {
-              await hmsActions.attachVideo(screenTrack.id, screenRef.current);
-            } else {
-              await hmsActions.detachVideo(screenTrack.id, screenRef.current);
-            }
-          }
-        })();
-        //eslint-disable-next-line react-hooks/exhaustive-deps
-      }, [screenTrack]);
+
 
     return (
         <div className="flex h-screen">
         <div className="relative h-screen">
-          <video
-            ref={screenRef}
-            autoPlay={true}
-            playsInline
-            muted={false}
-            className={`screen ${
-              isLocal ? "" : ""
-            }`}
-          ></video>
+          {/* display screen shared for viewer */}
+         
         </div>
       </div>
 
