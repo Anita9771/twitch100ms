@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Select from "../Select/Select";
-import { useHMSActions,
-         useHMSStore,
-         selectLocalPeer } 
+import { useHMSActions} 
          from '@100mslive/hms-video-react';
 import getToken from "../../utils/getToken";
 

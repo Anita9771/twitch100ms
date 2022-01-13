@@ -12,9 +12,6 @@ const Screen = ({peer, isLocal }) => {
     const screenRef = React.useRef(null);
     const screenTrack = useHMSStore(selectScreenShareByPeerID(peer.id));
 
-    const removeScreen = async () => {
-      await hmsActions.setScreenShareEnabled(false);
-    }
 
     
     React.useEffect(() => {
@@ -25,7 +22,7 @@ const Screen = ({peer, isLocal }) => {
             if (screenTrack.enabled) {
               await hmsActions.attachVideo(screenTrack.id, screenRef.current);
             } else {
-              await hmsActions.detachVideo(screenTrack.id, screenRef.current, removeScreen);
+              await hmsActions.detachVideo(screenTrack.id, screenRef.current);
             }
           }
         })();

@@ -17,10 +17,7 @@ const Room = () => {
 
    return (
     <div className="flex flex-row">
-      {localPeer.length === 1 ?
-      (alert("Stage occupied!")):
-          <>
-          (<div className="flex flex-wrap">
+          <div className="flex flex-wrap">
               {
               isModerator ? 
                   (localPeer && < VideoTile peer={localPeer} isLocal={true}  />)
@@ -58,9 +55,7 @@ const Room = () => {
 
       <ChatContainer 
       className="text-white" />
-      <ControlBar />)
-          </>
-          }
+      <ControlBar />
     </div>
   );
 };

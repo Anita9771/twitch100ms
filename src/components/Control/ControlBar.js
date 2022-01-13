@@ -18,17 +18,14 @@ const ControlBar = () => {
   const isLocalVideoEnabled = useHMSStore(selectIsLocalVideoEnabled);
   const isLocalScreenShared = useHMSStore(selectIsLocalScreenShared);
 
+  // Toggle options
+
   const toggleAudio = async () => {
     await hmsActions.setLocalAudioEnabled(!isLocalAudioEnabled);
   };
   const toggleVideo = async () => {
     await hmsActions.setLocalVideoEnabled(!isLocalVideoEnabled);
   };
-
-  
-  // const removeScreen = async () => {
-  //   await hmsActions.setScreenShareEnabled(false);
-  // }
   
   const toggleScreen = async () => {
     await hmsActions.setScreenShareEnabled(true);
@@ -37,6 +34,7 @@ const ControlBar = () => {
   return (
 
     <div className="fixed bottom-0 h-10 bg-gray-400 w-screen flex items-center justify-center">
+      {/* Count rendering */}
       { isModerator ? 
       <div className='flex items-center px-6 py-3 bg-gray-800 text-white font-bold  rounded-3xl space-x-2'>
        <p className='inline-block'>Count: {peers.length}</p>
@@ -44,6 +42,7 @@ const ControlBar = () => {
     : null
       }
 
+      {/* Audio rendering */}
 
     { isModerator ? 
 
@@ -59,7 +58,7 @@ const ControlBar = () => {
             null
     }
 
-    {/* sharescreen */}
+    {/* sharescreen rendering */}
       { isModerator ? 
 
         <button
@@ -73,7 +72,7 @@ const ControlBar = () => {
               null
         }
 
- {/* sharescreen */}
+ {/* video rendering */}
 
 { isModerator ? 
 
@@ -86,6 +85,8 @@ const ControlBar = () => {
       :
             null
     }
+
+    {/* End room buttom rendering */}
 
       <button
       className='px-6 py-3 w-40 bg-red-600 text-white font-bold hover:opacity-80 rounded-3xl border-none focus:ring-1 ring-brand-100 outline-none'
