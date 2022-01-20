@@ -5,10 +5,6 @@ import App from "./App";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-  <HMSRoomProvider>
-    <HMSThemeProvider appBuilder={{ theme: "light" }}>
-      <App />
-    </HMSThemeProvider>
-  </HMSRoomProvider>,
+  
   rootElement
 );

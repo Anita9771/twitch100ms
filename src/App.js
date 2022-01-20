@@ -19,7 +19,6 @@ const App = () => {
   return (
       <div className="App">
 
-        {isConnected ?<Room /> : <JoinForm /> } 
       </div>
   );
 }
