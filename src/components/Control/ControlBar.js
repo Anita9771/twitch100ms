@@ -1,4 +1,6 @@
 import React from "react";
+import Mute from "../../assets/mute.png";
+import Unmute from "../../assets/unmute.png";
 import {
   useHMSActions,
   useHMSStore,
@@ -20,33 +22,76 @@ const ControlBar = () => {
 
   // Toggle options
 
+  const toggleAudio = async () => {
+    await hmsActions.setLocalAudioEnabled(!isLocalAudioEnabled);
+  };
+  const toggleVideo = async () => {
+    await hmsActions.setLocalVideoEnabled(!isLocalVideoEnabled);
+  };
   
+  const toggleScreen = async () => {
+    await hmsActions.setScreenShareEnabled(true);
+  }
 
   return (
-
-    <div className="fixed bottom-0 h-10 bg-gray-400 w-screen flex items-center justify-center">
-      {/* Count rendering */}
-     
-
-      {/* Audio rendering */}
-
     
+      <>
+      <div className="fixed bottom-0 h-5 w-screen flex items-center justify-center z-10 mb-20">
+       <>
+{
+  isModerator ?        
+  <>
+  {/* Audio rendering */}
+  <button
+    className="tracking-wider outline-none mr-2"
+    onClick={toggleAudio}
+    active={isLocalAudioEnabled}
 
-    {/* sharescreen rendering */}
+  >
+    {isLocalAudioEnabled ? <img src={Unmute} alt="mute" className="image h-5 w-5 rounded-lg" /> : <img src={Mute} alt="unmute"  className="image h-5 w-5 bg-gray-900 rounded-lg" />} 
+  </button>
+{/* sharescreen rendering */}
+ 
+
+    <button
+      className="text-xs uppercase tracking-wider bg-white py-1 px-2 rounded-lg shadow-lg text-indigo-500 mr-2"
+      onClick={toggleScreen}
+      active={!isLocalScreenShared}
+    >
+        {isLocalScreenShared ? "unShare" : "Share"} 
+    </button>
+        
+
+{/* video rendering */}
+
+
+
+  <button
+    className="text-xs uppercase tracking-wider bg-white py-1 px-2 rounded-lg shadow-lg text-indigo-500"
+    onClick={toggleVideo}
+  >
+    {isLocalVideoEnabled ? "Hide" : "Unhide"}
+  </button>
+  </> : null
+}
       
-
- {/* video rendering */}
-
 
     {/* End room buttom rendering */}
 
       <button
-      className='px-6 py-3 w-40 bg-red-600 text-white font-bold hover:opacity-80 rounded-3xl border-none focus:ring-1 ring-brand-100 outline-none'
-      
+      className='text-xs uppercase tracking-wider bg-white py-1 px-2 rounded-lg shadow-lg text-iwhite ml-2 bg-red-600'
+      onClick={() => {
+          hmsActions.leave();
+        }}
     >
-        
+     {
+       isModerator ? "End" : "Leave"
+     }
     </button>
-    </div>
+       </> 
+     </div>
+      </>
+    
   );
 };
 

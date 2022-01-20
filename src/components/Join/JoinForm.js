@@ -6,7 +6,7 @@ import getToken from "../../utils/getToken";
 
 
 
-const JoinForm = () => {
+  const JoinForm = ({handleStart}) => {
 
   const hmsActions = useHMSActions();
   const [userName, setUserName] = useState("");
@@ -15,8 +15,22 @@ const JoinForm = () => {
 
   const joinRoom = () => {
     
+      getToken(role)
+      .then((token) => {
+        hmsActions.join({
+          userName: userName || 'Anonymous',
+          authToken: token,
+          settings: {
+            isAudioMuted: true,
+          },
+        });
+      })
+      .catch((error) => {
+        console.log('Token API Error', error);
+      });
 
   };
+
 
 
   return (

@@ -705,6 +705,14 @@
   .bg-white {
     background-color: #fff;
   }
+
+  .text-white{
+    color: white;
+  }
+
+  text-black{
+    color: black;
+  }
   
   .bg-gray-100 {
     background-color: #f7fafc;
@@ -3205,6 +3213,10 @@
   .rounded-bl-full {
     border-bottom-left-radius: 9999px;
   }
+
+  .rounded-circle {
+    border-radius: 50%;
+  }
   
   .border-solid {
     border-style: solid;
@@ -3811,6 +3823,14 @@
   .h-20 {
     height: 5rem;
   }
+
+  .h-21{
+    height: 4.5rem;
+  }
+
+  .w-21{
+    width: 4.5rem;
+  }
   
   .h-24 {
     height: 6rem;
@@ -3834,6 +3854,10 @@
   
   .h-64 {
     height: 10rem;
+  }
+
+  .h-70 {
+    height: 15rem
   }
   
   .h-auto {
@@ -4558,6 +4582,10 @@
   
   .mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .mt-10-h {
+    margin-top: 2.7rem;
   }
   
   .mr-10 {
@@ -5884,14 +5912,47 @@
   .top-0 {
     top: 0;
   }
+
+  .top-1{
+    top: 1rem;
+  }
+
+  .top-2{
+    top: 2rem;
+  }
+
+  .top-4 {
+    top: 4rem;
+  }
   
   .right-0 {
     right: 0;
   }
-  
+
+  .right-5{
+    right: 5rem;
+  }
+
+  .right-10{
+    right: 10rem;
+  }
+
+  .right-20{
+    right: 20rem;
+  }
+
   .bottom-0 {
     bottom: 0;
   }
+
+  .bottom-live{
+    bottom: -0.3rem;
+  }
+
+  .left-live{
+    left: 1rem;
+  }
+
   
   .left-0 {
     left: 0;
@@ -7465,6 +7526,18 @@
   .w-40 {
     width: 10rem;
   }
+
+  .sign-c{
+    background:rgb(119 44 232);
+  }
+
+  .text-sign-c{
+    color:rgb(119 44 232);
+  }
+
+  .border-sign-c{
+    border-color: rgb(119 44 232);
+  }
   
   .w-48 {
     width: 12rem;
@@ -7478,6 +7551,9 @@
     width: 16rem;
   }
 
+  .w-70{
+    width: 18rem;
+  }
   
   .w-auto {
     width: auto;
@@ -7601,6 +7677,10 @@
   
   .z-0 {
     z-index: 0;
+  }
+
+  .z-5{
+    z-index: 5;
   }
   
   .z-10 {

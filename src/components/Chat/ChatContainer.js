@@ -24,9 +24,9 @@ import {
       }
     }, [storeMessages]);
     return (
-     <div className="text-white fixed right-0 h-screen">
-        <ChatLayout>
-        <ChatFeed>
+     <div className="text-black bg-white border-2 border-gray-200 w-70 fixed bottom-0 right-0 z-10 mt-8 h-auto">
+        <ChatLayout className="text-black bg-white">
+        <ChatFeed className="text-black bg-white">
           {storeMessages.map((m) => (
             <Chat key={m.id} msg={m} />
           ))}
