@@ -3,6 +3,7 @@ const endPoint =
 "<token_endpoint>";
 
 export default async function getToken(role) {
+  // Fix in endPoint and roomId
     const response = await fetch(`${endPoint}api/token`, {
       method: 'POST',
       body: JSON.stringify({

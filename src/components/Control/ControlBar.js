@@ -35,34 +35,52 @@ const ControlBar = () => {
 
   return (
     
-      <>
-      <div className="fixed bottom-0 h-5 w-screen flex items-center justify-center z-10 mb-20">
-       <>
+    <>
+    <div className="fixed bottom-0 h-5 w-screen flex items-center justify-center z-10 mb-20">
+     <>
 {
-  isModerator ?        
-  <>
-  {/* Audio rendering */}
-  
-  {/* sharescreen rendering */}
- 
+isModerator ?        
+<>
+{/* Audio rendering */}
+<button
+  className="tracking-wider outline-none mr-2"
+  onClick={toggleAudio}
+  active={isLocalAudioEnabled}
+>
+  {/* code here */}
+  </button>
 
-    
-        
+{/* sharescreen rendering */}
+  <button
+    className="text-xs uppercase tracking-wider bg-white py-1 px-2 rounded-lg shadow-lg text-indigo-500 mr-2"
+    onClick={toggleScreen}
+    active={!isLocalScreenShared}
+  >
+       {/*code here  */}
+  </button>
 
-  {/* video rendering */}
-
-</>
-
-  : null
+{/* video rendering */}
+<button
+  className="text-xs uppercase tracking-wider bg-white py-1 px-2 rounded-lg shadow-lg text-indigo-500"
+  onClick={toggleVideo}
+>
+  {/* code here */}
+</button>
+</> : null
 }
-      
+    
 
-    {/* End room buttom rendering */}
+  {/* End room buttom rendering */}
 
-      
-       </> 
-     </div>
-      </>
+    <button
+    className='text-xs uppercase tracking-wider bg-white py-1 px-2 rounded-lg shadow-lg text-iwhite ml-2 bg-red-600'
+    // code here
+  >
+   End
+  </button>
+     </> 
+   </div>
+    </>
     
   );
 };
