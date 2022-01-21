@@ -1,8 +1,8 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Functionality using the 100ms SDK and Tailwind CSS for styling.
+Functionality added with 100ms SDK and Tailwind CSS for styling.
 
 To get this app up and running, follow the laid down steps from the blog.
 
-Find attached a snippet of the working app here: https://vimeo.com/668348752
+Find attached a snippet of the working app here: https://bit.ly/3qMQvYz
