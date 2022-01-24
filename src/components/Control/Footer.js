@@ -46,14 +46,7 @@ const Footer = () => {
         <div className="flex mx-2">
          {/* code here */}
          
-          <button
-            className='text-xs uppercase tracking-wider bg-white py-1 px-2 rounded-lg shadow-lg text-iwhite ml-2 bg-red-600'
-            onClick={() => {
-          hmsActions.leave();
-        }}
-    >
-     Leave
-    </button>
+          
         </div>
         </div>
       </div>
