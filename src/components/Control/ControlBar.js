@@ -30,7 +30,7 @@ const ControlBar = () => {
   };
   
   const toggleScreen = async () => {
-    await hmsActions.setScreenShareEnabled(true);
+    await hmsActions.setScreenShareEnabled(!isLocalScreenShared);
   }
 
   return (
